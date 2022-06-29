@@ -1,0 +1,24 @@
+{
+  "name": "sdc-reviews",
+  "version": "1.0.0",
+  "description": "Reviews API service for SDC",
+  "main": "SQLschema.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rpp35-sdc-gorman/reviews.git"
+  },
+  "keywords": [
+    "SDC",
+    "reviews",
+    "database"
+  ],
+  "author": "Joshua Waalkes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rpp35-sdc-gorman/reviews/issues"
+  },
+  "homepage": "https://github.com/rpp35-sdc-gorman/reviews#readme"
+}
