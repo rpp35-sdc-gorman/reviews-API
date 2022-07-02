@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/rpp35-sdc-gorman/reviews/issues"
   },
-  "homepage": "https://github.com/rpp35-sdc-gorman/reviews#readme"
+  "homepage": "https://github.com/rpp35-sdc-gorman/reviews#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "postgres": "^3.2.4",
+    "sequelize": "^6.21.2"
+  }
 }
