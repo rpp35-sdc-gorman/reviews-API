@@ -3,30 +3,29 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+const getReviewByProductId = require('./queries.js').getReviewByProductId;
+const markReviewHelpful = require('./queries.js').markReviewHelpful;
+const addReview = require('./queries.js').addReview;
+
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 ///// ROUTES /////
 
-app.get('/reviews', (req, res) => {
-  //parse values for query
-  //run db query
-    //success: send results
-    //error: console.log and send results
+
+app.get('/reviews', (request, response) => {
+  getReviewByProductId(request, response);
 });
 
-app.put('/reviews/:review_id/helpful', (req, res) => {
-  //parse review id into query
-  //run db query
-    //success: send success message/status code
-    //error: log and send error
+app.put('/reviews/:review_id/helpful', (request, response) => {
+  markReviewHelpful(request, response);
 });
 
-app.post('/reviews', (req, res) => {
-  //parse review id into query
-  //run db query
-    //success: send success message/status code
-    //error: log and send error
+app.post('/reviews', (request, response) => {
+  console.log(request.body);
+  addReview(request, response);
 })
 
 
