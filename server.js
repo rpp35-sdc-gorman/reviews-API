@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 4000;
 
 const getReviewByProductId = require('./queries.js').getReviewByProductId;
 const markReviewHelpful = require('./queries.js').markReviewHelpful;
@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/reviews', (request, response) => {
+  console.log('reviews');
   getReviewByProductId(request, response);
 });
 
