@@ -8,9 +8,9 @@ const pool  = new Pool({
   port: '5432'
 });
 
-const getReviewByProductId = (request) => {
-  const id = parseInt(request.query.product_id);
-  // console.log(id);
+//need to index queries possibly...
+const getReviewByProductId = (id) => {
+  console.log(id);
   return pool.query('SELECT * FROM reviews WHERE product_id = $1', [id]);
 }
 
