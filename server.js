@@ -16,7 +16,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/reviews', (request, response) => {
-  getReviewByProductId(request, response);
+  getReviewByProductId(request)
+  //implement caching here
+    .then((reviews) => response.status(200).send(reviews.rows));
 });
 
 app.put('/reviews/:review_id/helpful', (request, response) => {

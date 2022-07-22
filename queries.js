@@ -8,16 +8,10 @@ const pool  = new Pool({
   port: '5432'
 });
 
-const getReviewByProductId = (request, response) => {
+const getReviewByProductId = (request) => {
   const id = parseInt(request.query.product_id);
-  console.log(id);
-  pool.query('SELECT * FROM reviews WHERE product_id = $1', [id], (err, results) => {
-    if (err) {
-      throw err;
-    }
-    // console.log(results.rows);
-    response.send(results.rows);
-  });
+  // console.log(id);
+  return pool.query('SELECT * FROM reviews WHERE product_id = $1', [id]);
 }
 
 const markReviewHelpful = (request, response) => {
