@@ -15,7 +15,7 @@ const getReviewByProductId = (request, response) => {
     if (err) {
       throw err;
     }
-    console.log(results.rows);
+    // console.log(results.rows);
     response.send(results.rows);
   });
 }

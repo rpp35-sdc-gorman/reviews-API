@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.get('/reviews', (request, response) => {
-  console.log('reviews');
   getReviewByProductId(request, response);
 });
 
