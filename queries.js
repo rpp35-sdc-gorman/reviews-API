@@ -10,8 +10,7 @@ const pool  = new Pool({
 
 //need to index queries possibly...
 const getReviewByProductId = (id) => {
-  console.log(id);
-  return pool.query('SELECT * FROM reviews WHERE product_id = $1', [id]);
+  return pool.query('SELECT * FROM reviews WHERE product_id = $1', [12345]);
 }
 
 const markReviewHelpful = (request, response) => {
