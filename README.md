@@ -7,10 +7,10 @@ This is the API for project Atelier which is an E-commerce application. My team 
   
 ## To Use: 
  1. Use `git clone` to clone the repo onto an instance.
- 2. Set up your PostgreSQL 
-    *Change the `host` in queries.js to the appropriate ip address.
-    *Run `npm run db-connect`
-    *Change users and passwords as appropriate
+ 2. Set up your PostgreSQL.
+  - Change the `host` in queries.js to the appropriate ip address.
+  - Run `npm run db-connect`
+  - Change users and passwords as appropriate
  3. Run `npm start` to start the server
  4. Run `npm test` to test the service. 
   
